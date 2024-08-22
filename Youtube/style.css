@@ -1,0 +1,271 @@
+/*ФОН*/
+.ym-dark-theme {
+    --ym-background-color-primary-enabled-basic: #0F0F0F;
+}
+
+section.PlayerBar_root__cXUnU {
+	position: fixed;
+	background: #000;
+	border-width: 1;
+	width: 980px;
+	height: 551px;
+	left: 100px;
+	top: 160px;
+	z-index: 20;
+}
+
+.dynamicLight {
+	position: fixed;
+	background: #0000;
+	border-width: 0;
+	border-radius: 30px;
+	width: 1030px;
+	height: 595px;
+	left: 75px;
+	top: 150px;
+	z-index: 1;
+	filter: blur(60px);
+	opacity: 0.5;
+}
+
+.SonataControlsDesktop_sonataButtons__ux0qT {
+	position: fixed;
+	left: 118px;
+	bottom: 140px;
+}
+
+.ChangeTimecode_slider__P4qmT {
+	position: fixed;
+	left: 110px;
+	bottom: 194px;
+	width: 961px;
+}
+
+.JkKcxRVvjK7lcakkEliC:before {
+	background-color: #f00;
+}
+
+.ChangeTimecode_slider__P4qmT {
+	--slider-thumb-box-shadow-color: #0000;
+}
+
+.SonataControlsDesktop_root__oluUH {
+	position: fixed;
+	left: 100px;
+	width: 980px;
+	height: 90px;
+	bottom: 129px;
+	border-radius: 10px;
+	background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.7) 100%);
+}
+
+.Timecode_root_start__pHG5N {
+	position: fixed;
+	left: 249px;
+	bottom: 154px;
+	opacity: 1;
+	color: #fff;
+	font-weight: 250;
+}
+
+.Timecode_root_start__pHG5N:after {
+	content: "/";
+	margin-left: 5px;
+}
+
+.Timecode_root_end__LLQsh {
+	position: fixed;
+	left: 297px;
+	bottom: 154px;
+	opacity: 1;
+	color: #fff;
+	font-weight: 250;
+}
+
+.ChangeVolume_icon__5Zv2a {
+	position: fixed;
+	left: 210px;
+	bottom: 152px;
+}
+
+.FullscreenPlayerDesktopButton_root__qGgoC {
+	opacity: 1;
+	background: 0;
+	z-index: 30;
+}
+
+.FullscreenPlayerDesktopButton_button__7NEl6 {
+	position: fixed;
+	left: 1020px;
+	bottom: 143px;
+	background: 0;
+}
+
+.PlayerBarDesktop_meta__6sm58 {
+	position: fixed;
+	left: 878px;
+	bottom: 148px;
+	z-index: 20;
+}
+
+[data-test-id="PREVIOUS_TRACK_BUTTON"],
+[data-test-id="CHANGE_VOLUME_SLIDER"],
+.BlockHeader_heading__4iqvS,
+.NavbarDesktop_pinsList___jXIM:after,
+.NavbarDesktop_pinsList___jXIM:before,
+.ZrkG6gNYcr4h3hfkhyT1,
+.xfFtKQpgAYvC2jI1tBtS,
+.UserProfile_root__vFuOj,
+.FullscreenPlayerDesktop_important__dGfiL,
+.l66GiFKS1Ux_BNd603Cu,
+.ZSjQrniulol6xKOq2Bou {
+	display: none;
+}
+
+.DefaultLayout_content__md70Z {
+	position: fixed;
+	width: 0;
+	background: 0;
+	border-width: 0;
+	border-radius: 0;
+	display: none;
+}
+
+.NavbarDesktop_pinsList___jXIM {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	top: 155px;
+	left: 1090px;
+}
+
+.PinItem_cover__9TcjE {
+	width: 168px;
+	height: 94px;
+	margin-top: 7px;
+	bottom: 35px;
+}
+
+.Pin_root__UyplT {
+	height: 115px;
+	overflow: visible;
+}
+
+.Pin_root__UyplT:hover {
+	height: 115px;
+	overflow: visible;
+	background: 0;
+}
+
+.Pin_meta__MzX_7 {
+	margin-left: 130px;
+	margin-top: -55px;
+}
+
+.Pin_title__Jw5WW {
+	font-size: 15px;
+	font-weight: 400;
+}
+
+.Meta_title__GGBnH {
+	position: fixed;
+	bottom: 92px;
+	left: 100px;
+	font-size: 23px;
+	font-weight: 500;
+}
+
+.PlayerBarDesktop_coverContainer__2Z5nQ {
+	position: fixed;
+	bottom: 27px;
+	border-radius: 150px;
+	width: 45px;
+	height: 45px;
+	left: 100px;
+}
+/*
+.PlayerBarDesktop_coverContainer__2Z5nQ:after {
+	position: fixed;
+	content: "Подписаться";
+	margin-left: 170px;
+	bottom: 27px;
+	color: #000;
+	background: #fff;
+	padding: 10px;
+	width: 120px;
+	height: 40px;
+	text-align: center;
+	border-radius: 150px;
+	font-weight: 600;
+}
+*/
+.Meta_artistCaption__JESZi {
+	position: fixed;
+	bottom: 39px;
+	left: 155px;
+	color: #fff;
+}
+
+.NavbarDesktop_logo__Z4jGx {
+	position: fixed;
+	top: 182px;
+	left: 100px;
+	color: #fff;
+	z-index: 200;
+	opacity: 0.5;
+}
+
+.AccK_iF55jra4_OlFloI,
+.YjRa1ZjM_lXFlrfS7jcu,
+.qoEgTMlU0VM3i4p8LeMG {
+	color: #fff;
+}
+
+.browserScreen {
+	position: fixed;
+	content: url("http://127.0.0.1:2007/assets/browser.png");
+	z-index: 100;
+}
+
+.TitleBar_root__QjdOZ {
+	top: 0px;
+}
+
+.TitleBar_button__9MptL,
+.TitleBar_root__QjdOZ {
+	height: 44px;
+	opacity: 0;
+}
+
+/* Стили для floatingDiv */
+#floatingDiv {
+    position: fixed;
+    bottom: 215px;
+    left: 590px;
+    transform: translateX(-50%); /* Центрируем элемент по горизонтали */
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px;
+    border-radius: 0px;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    text-align: center; /* Центрируем текст */
+    opacity: 0.8;
+}
+
+[data-test-id="PLAYERBAR_DESKTOP_CONTEXT_MENU_BUTTON"] {
+	position: fixed;
+	left: 1030px;
+	bottom: 70px;
+	background: #272727;
+	color: #fff;
+}
+
+[data-test-id="LIKE_BUTTON"] {
+	position: fixed;
+	left: 980px;
+	bottom: 70px;
+	background: #272727;
+	color: #fff;
+}
