@@ -32,7 +32,7 @@ setInterval(() => {
             };
         }
     }
-}, 0);
+}, 500);
 
 // dynamicLight
 setInterval(() => {
@@ -41,13 +41,15 @@ setInterval(() => {
 
     imgElements.forEach(img => {
         if (img.src && img.src.includes('/1000x1000')) {
-            imgBackground = img.src.replace('/1000x1000', '/1000x1000');
+            imgBackground = img.src.replace('/1000x1000', '/200x200');
         }
     });
 
     if (imgBackground) {
         const targetElement = document.querySelector('.dynamicLight');
         if (targetElement) {
+            // Добавляем CSS-свойства для плавного перехода
+            targetElement.style.transition = "background 5s ease-in-out";
 
             const currentBackground = targetElement.style.background;
 
@@ -57,7 +59,6 @@ setInterval(() => {
             img.src = imgBackground;
 
             img.onload = () => {
-
                 if (currentBackground !== newBackground) {
                     targetElement.style.background = newBackground;
                 }
@@ -68,7 +69,8 @@ setInterval(() => {
             };
         }
     }
-}, 0);
+}, 1000);  // Интервал в 1 секунду для проверки изменения изображения
+
 
 function addDynamicLightElement() {
     const dynamicLight = document.createElement('div');
@@ -102,6 +104,59 @@ function addbrowserScreenElement() {
 
 addbrowserScreenElement();
 
+// Бровсер buttons
+function addbrowserButtonsElement() {
+    const browserButtons = document.createElement('div');
+
+    browserButtons.classList.add('browserButtons');
+
+    document.body.appendChild(browserButtons);
+}
+
+addbrowserButtonsElement();
+
+// Цвета
+function firstColorBlock() {
+    const firstColorBlock = document.createElement('div');
+
+    firstColorBlock.classList.add('firstColorBlock');
+
+    document.body.appendChild(firstColorBlock);
+}
+
+firstColorBlock();
+
+function secondColorBlock() {
+    const secondColorBlock = document.createElement('div');
+
+    secondColorBlock.classList.add('secondColorBlock');
+
+    document.body.appendChild(secondColorBlock);
+}
+
+secondColorBlock();
+
+function thirdColorBlock() {
+    const thirdColorBlock = document.createElement('div');
+
+    thirdColorBlock.classList.add('thirdColorBlock');
+
+    document.body.appendChild(thirdColorBlock);
+}
+
+thirdColorBlock();
+
+// Поиск
+function searchBlock() {
+    const searchBlock = document.createElement('div');
+
+    searchBlock.classList.add('searchBlock');
+
+    document.body.appendChild(searchBlock);
+}
+
+searchBlock();
+
 // Субтитры
 const floatingDiv = document.createElement('div');
 floatingDiv.id = 'floatingDiv';
@@ -130,3 +185,16 @@ function updateFloatingText() {
 setInterval(updateFloatingText, 100);
 
 updateFloatingText();
+
+// Получаем элементы
+const playerBar = document.querySelector('.PlayerBar_root__cXUnU');
+const logo = document.querySelector('.NavbarDesktop_logo__Z4jGx');
+
+// Добавляем обработчики событий
+playerBar.addEventListener('mouseenter', () => {
+    logo.style.opacity = 1;
+});
+
+playerBar.addEventListener('mouseleave', () => {
+    logo.style.opacity = 0;
+});
