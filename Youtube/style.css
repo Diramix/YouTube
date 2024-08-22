@@ -118,7 +118,10 @@ section.PlayerBar_root__cXUnU {
 .UserProfile_root__vFuOj,
 .FullscreenPlayerDesktop_important__dGfiL,
 .l66GiFKS1Ux_BNd603Cu,
-.ZSjQrniulol6xKOq2Bou {
+.ZSjQrniulol6xKOq2Bou,
+[data-test-id="SHUFFLE_BUTTON"],
+[data-test-id="REPEAT_BUTTON_NO_REPEAT"],
+.NavbarDesktop_collapseButton__XQh9d {
 	display: none;
 }
 
@@ -199,10 +202,14 @@ section.PlayerBar_root__cXUnU {
 	font-weight: 600;
 }
 */
-.Meta_artistCaption__JESZi {
+.SeparatedArtists_root_variant_breakAll__34YbW  {
 	position: fixed;
 	bottom: 39px;
 	left: 155px;
+	color: #fff;
+}
+
+.Meta_artistCaption__JESZi {
 	color: #fff;
 }
 
