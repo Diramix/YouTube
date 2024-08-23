@@ -93,12 +93,11 @@ setInterval(checkPlayerBar, 300);
 
 setInterval(updateLikeButtonBackground, 300);
 
-// Первоначальная проверка для установки правильного фона при загрузке страницы
 updateLikeButtonBackground();
 
 // dynamicLight
-let currentBackground = "";  // Текущее изображение фона
-let isAnimating = false;  // Флаг, чтобы избежать резкой смены во время анимации
+let currentBackground = "";
+let isAnimating = false;
 
 setInterval(() => {
     const imgElements = document.querySelectorAll('[class*="PlayerBarDesktop_cover"]');
@@ -118,13 +117,11 @@ setInterval(() => {
 
             img.onload = () => {
                 if (currentBackground !== imgBackground && !isAnimating) {
-                    currentBackground = imgBackground;  // Обновляем текущий фон
-                    isAnimating = true;  // Устанавливаем флаг анимации
+                    currentBackground = imgBackground;
+                    isAnimating = true;
 
-                    // Анимация через псевдоэлемент
                     const newBackground = `url(${imgBackground}) center center / cover no-repeat`;
 
-                    // Создаем или находим псевдоэлемент для плавной анимации
                     let backgroundOverlay = document.querySelector('.backgroundOverlay');
                     if (!backgroundOverlay) {
                         backgroundOverlay = document.createElement('div');
@@ -132,7 +129,6 @@ setInterval(() => {
                         targetElement.appendChild(backgroundOverlay);
                     }
 
-                    // Устанавливаем стили псевдоэлемента
                     backgroundOverlay.style.position = 'absolute';
                     backgroundOverlay.style.top = '0';
                     backgroundOverlay.style.left = '0';
@@ -144,22 +140,19 @@ setInterval(() => {
                     backgroundOverlay.style.opacity = '0';
                     backgroundOverlay.style.background = newBackground;
 
-                    // Применяем анимацию плавного появления
                     requestAnimationFrame(() => {
                         backgroundOverlay.style.opacity = '1';
                     });
 
-                    // После завершения анимации (5 секунд)
                     setTimeout(() => {
-                        targetElement.style.background = newBackground;  // Устанавливаем новый фон основного элемента
-                        backgroundOverlay.style.opacity = '0';  // Скрываем псевдоэлемент
+                        targetElement.style.background = newBackground;
+                        backgroundOverlay.style.opacity = '0';
 
-                        // Через небольшую задержку удаляем псевдоэлемент, чтобы избежать резких изменений
                         setTimeout(() => {
                             backgroundOverlay.remove();
-                            isAnimating = false;  // Сбрасываем флаг анимации после её завершения
-                        }, 500);  // Небольшая задержка для завершения скрытия
-                    }, 5000);  // Время завершения анимации (5 секунд)
+                            isAnimating = false;
+                        }, 500);
+                    }, 5000);
                 }
             };
 
@@ -168,7 +161,7 @@ setInterval(() => {
             };
         }
     }
-}, 500);  // Интервал 3 секунды для проверки изменения изображения
+}, 500);
 
 function addDynamicLightElement() {
     const dynamicLight = document.createElement('div');
