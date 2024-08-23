@@ -34,42 +34,6 @@ setInterval(() => {
     }
 }, 500);
 
-// dynamicLight
-setInterval(() => {
-    const imgElements = document.querySelectorAll('[class*="PlayerBarDesktop_cover"]');
-    let imgBackground = "";
-
-    imgElements.forEach(img => {
-        if (img.src && img.src.includes('/1000x1000')) {
-            imgBackground = img.src.replace('/1000x1000', '/200x200');
-        }
-    });
-
-    if (imgBackground) {
-        const targetElement = document.querySelector('.dynamicLight');
-        if (targetElement) {
-            // Добавляем CSS-свойства для плавного перехода
-            targetElement.style.transition = "background 5s ease-in-out";
-
-            const currentBackground = targetElement.style.background;
-
-            const newBackground = `url(${imgBackground}) center center / cover no-repeat`;
-
-            const img = new Image();
-            img.src = imgBackground;
-
-            img.onload = () => {
-                if (currentBackground !== newBackground) {
-                    targetElement.style.background = newBackground;
-                }
-            };
-
-            img.onerror = () => {
-                console.error(`Ошибка загрузки изображения: ${imgBackground}`);
-            };
-        }
-    }
-}, 1000);  // Интервал в 1 секунду для проверки изменения изображения
 
 // downButtons
 function downButtons() {
@@ -133,6 +97,79 @@ setInterval(updateLikeButtonBackground, 300);
 updateLikeButtonBackground();
 
 // dynamicLight
+let currentBackground = "";  // Текущее изображение фона
+let isAnimating = false;  // Флаг, чтобы избежать резкой смены во время анимации
+
+setInterval(() => {
+    const imgElements = document.querySelectorAll('[class*="PlayerBarDesktop_cover"]');
+    let imgBackground = "";
+
+    imgElements.forEach(img => {
+        if (img.src && img.src.includes('/1000x1000')) {
+            imgBackground = img.src.replace('/1000x1000', '/200x200');
+        }
+    });
+
+    if (imgBackground && imgBackground !== currentBackground && !isAnimating) {
+        const targetElement = document.querySelector('.dynamicLight');
+        if (targetElement) {
+            const img = new Image();
+            img.src = imgBackground;
+
+            img.onload = () => {
+                if (currentBackground !== imgBackground && !isAnimating) {
+                    currentBackground = imgBackground;  // Обновляем текущий фон
+                    isAnimating = true;  // Устанавливаем флаг анимации
+
+                    // Анимация через псевдоэлемент
+                    const newBackground = `url(${imgBackground}) center center / cover no-repeat`;
+
+                    // Создаем или находим псевдоэлемент для плавной анимации
+                    let backgroundOverlay = document.querySelector('.backgroundOverlay');
+                    if (!backgroundOverlay) {
+                        backgroundOverlay = document.createElement('div');
+                        backgroundOverlay.classList.add('backgroundOverlay');
+                        targetElement.appendChild(backgroundOverlay);
+                    }
+
+                    // Устанавливаем стили псевдоэлемента
+                    backgroundOverlay.style.position = 'absolute';
+                    backgroundOverlay.style.top = '0';
+                    backgroundOverlay.style.left = '0';
+                    backgroundOverlay.style.width = '100%';
+                    backgroundOverlay.style.height = '100%';
+                    backgroundOverlay.style.zIndex = '-1';
+                    backgroundOverlay.style.willChange = 'opacity, transform';
+                    backgroundOverlay.style.transition = 'opacity 5s ease-in-out';
+                    backgroundOverlay.style.opacity = '0';
+                    backgroundOverlay.style.background = newBackground;
+
+                    // Применяем анимацию плавного появления
+                    requestAnimationFrame(() => {
+                        backgroundOverlay.style.opacity = '1';
+                    });
+
+                    // После завершения анимации (5 секунд)
+                    setTimeout(() => {
+                        targetElement.style.background = newBackground;  // Устанавливаем новый фон основного элемента
+                        backgroundOverlay.style.opacity = '0';  // Скрываем псевдоэлемент
+
+                        // Через небольшую задержку удаляем псевдоэлемент, чтобы избежать резких изменений
+                        setTimeout(() => {
+                            backgroundOverlay.remove();
+                            isAnimating = false;  // Сбрасываем флаг анимации после её завершения
+                        }, 500);  // Небольшая задержка для завершения скрытия
+                    }, 5000);  // Время завершения анимации (5 секунд)
+                }
+            };
+
+            img.onerror = () => {
+                console.error(`Ошибка загрузки изображения: ${imgBackground}`);
+            };
+        }
+    }
+}, 500);  // Интервал 3 секунды для проверки изменения изображения
+
 function addDynamicLightElement() {
     const dynamicLight = document.createElement('div');
 

@@ -117,7 +117,6 @@ section.PlayerBar_root__cXUnU {
 	z-index: 20;
 }
 
-[data-test-id="PREVIOUS_TRACK_BUTTON"],
 [data-test-id="CHANGE_VOLUME_SLIDER"],
 .BlockHeader_heading__4iqvS,
 .NavbarDesktop_pinsList___jXIM:after,
@@ -252,7 +251,7 @@ section.PlayerBar_root__cXUnU {
 .browserScreen {
 	position: fixed;
 	content: url("http://127.0.0.1:2007/assets/browser.png");
-	z-index: 100;
+	z-index: 14;
 	left: 0;
 	top: 0;
 }
@@ -305,7 +304,7 @@ section.PlayerBar_root__cXUnU {
 	background-color: #281D4E;
 	width: 100%;
 	height: 41px;
-	z-index: 91;
+	z-index: 12;
 	border-color: #3A3372;
 	border-style: solid;
 	border-width: 0px 0px 1px 1px;
@@ -317,7 +316,7 @@ section.PlayerBar_root__cXUnU {
 	width: 100%;
 	height: 32px;
 	top: 48px;
-	z-index: 92;
+	z-index: 13;
 }
 
 .TitleBar_root__QjdOZ {
@@ -406,4 +405,30 @@ section.PlayerBar_root__cXUnU {
 	left: calc(50% - 700px);
 	margin-left: 647px;
 	z-index: 10;
+}
+
+[data-test-id="PREVIOUS_TRACK_BUTTON"] {
+	position: fixed;
+	left: 8px;
+	top: 48px;
+	background: #fff;
+	z-index: 99999;
+	border-radius:4px;
+	color: #fff0;
+	width: 32px;
+	height: 32px;
+	opacity: 0;
+}
+
+[data-test-id="PREVIOUS_TRACK_BUTTON"]:hover {
+	position: fixed;
+	left: 8px;
+	top: 48px;
+	background: #fff;
+	z-index: 99999;
+	border-radius:4px;
+	color: #fff0;
+	width: 32px;
+	height: 32px;
+	opacity: 0.095;
 }
