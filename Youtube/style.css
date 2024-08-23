@@ -103,8 +103,8 @@ section.PlayerBar_root__cXUnU {
 
 .PlayerBarDesktop_meta__6sm58 {
 	position: fixed;
-	left: 878px;
-	bottom: 148px;
+	left: calc(50% + 5%);
+	top: 671px;
 	z-index: 20;
 }
 
@@ -121,7 +121,8 @@ section.PlayerBar_root__cXUnU {
 [data-test-id="SHUFFLE_BUTTON"],
 [data-test-id="REPEAT_BUTTON_NO_REPEAT"],
 .NavbarDesktop_collapseButton__XQh9d,
-.Meta_explicitMark__ocnCV {
+.Meta_explicitMark__ocnCV,
+.Meta_version__c2sHU {
 	display: none;
 }
 
@@ -182,19 +183,19 @@ section.PlayerBar_root__cXUnU {
 
 .Meta_title__GGBnH {
 	position: fixed;
-	bottom: 92px;
-	left: 100px;
+	top: 735px;
+	left: calc(50% - 43.75%);
 	font-size: 23px;
 	font-weight: 500;
 }
 
 .PlayerBarDesktop_coverContainer__2Z5nQ {
 	position: fixed;
-	bottom: 27px;
+	top: 778px;
 	border-radius: 150px;
 	width: 45px;
 	height: 45px;
-	left: 100px;
+	left: calc(50% - 43.75%);
 }
 /*
 .PlayerBarDesktop_coverContainer__2Z5nQ:after {
@@ -214,8 +215,8 @@ section.PlayerBar_root__cXUnU {
 */
 .SeparatedArtists_root_variant_breakAll__34YbW  {
 	position: fixed;
-	bottom: 39px;
-	left: 155px;
+	top: 791px;
+	left: calc(50% - 40.5%);
 	color: #fff;
 }
 
@@ -338,16 +339,61 @@ section.PlayerBar_root__cXUnU {
 
 [data-test-id="PLAYERBAR_DESKTOP_CONTEXT_MENU_BUTTON"] {
 	position: fixed;
-	left: 1030px;
-	bottom: 70px;
+	left: calc(50% - 43.75%);
+	margin-left: 949px;
+	top: 784px;
+	width: 35px;
+	height: 35px;
 	background: #272727;
-	color: #fff;
+	opacity: 0;
 }
 
-[data-test-id="LIKE_BUTTON"] {
+.PlayerBarDesktop_dislikeButton__XwMir {
 	position: fixed;
-	left: 980px;
-	bottom: 70px;
+	left: calc(50% - 43.75%);
+	margin-left: 743px;
+	top: 784px;
 	background: #272727;
 	color: #fff;
+	width: 53px;
+	height: 35px;
+	border-radius: 0px 150px 150px 0px;
+	background: #f00;
+	opacity: 0;
+	z-index: 11;
+}
+
+.PlayerBarDesktop_likeButton__LKH4K {
+	position: fixed;
+	left: calc(50% - 43.75%);
+	margin-left: 649px;
+	top: 784px;
+	background: #272727;
+	color: #fff;
+	width: 95px;
+	height: 35px;
+	border-radius: 150px 0px 0px 150px;
+	background: #f00;
+	opacity: 0;
+	z-index: 11;
+}
+
+.likeBack {
+	position: fixed;
+	left: calc(50% - 43.75%);
+	margin-left: 661px;
+	top: 792px;
+	width: 20px;
+	height: 20px;
+	background: #00f;
+	z-index: 5;
+}
+
+.downButtons {
+	position: fixed;
+	content: url("http://127.0.0.1:2007/assets/down-buttons.png");
+	top: 783px;
+	left: calc(50% - 43.75%);
+	margin-left: 647px;
+	z-index: 10;
 }

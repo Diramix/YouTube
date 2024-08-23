@@ -71,7 +71,68 @@ setInterval(() => {
     }
 }, 1000);  // Интервал в 1 секунду для проверки изменения изображения
 
+// downButtons
+function downButtons() {
+    const downButtons = document.createElement('div');
 
+    downButtons.classList.add('downButtons');
+
+    document.body.appendChild(downButtons);
+}
+
+downButtons();
+
+// .likeBack
+function likeBack() {
+    const likeBack = document.createElement('div');
+
+    likeBack.classList.add('likeBack');
+
+    document.body.appendChild(likeBack);
+}
+
+likeBack();
+
+// Функция для смены фона в зависимости от состояния aria-pressed
+function updateLikeButtonBackground() {
+    const likeButton = document.querySelector('.PlayerBarDesktop_likeButton__LKH4K');
+    const likeBack = document.querySelector('.likeBack');
+
+    if (likeButton && likeBack) {
+        const isPressed = likeButton.getAttribute('aria-pressed');
+
+        if (isPressed === 'true') {
+            likeBack.style.backgroundColor = '#f1f1f1';
+        } else if (isPressed === 'false') {
+            likeBack.style.backgroundColor = '#272727';
+        }
+    }
+}
+
+// checkPlayerBar
+function checkPlayerBar() {
+  const likeButton = document.querySelector('.PlayerBarDesktop_likeButton__LKH4K');
+  
+  const likeBackElements = document.querySelectorAll('.likeBack');
+  const downButtonElements = document.querySelectorAll('.downButtons');
+  
+  if (!likeButton) {
+    likeBackElements.forEach(element => element.style.display = 'none');
+    downButtonElements.forEach(element => element.style.display = 'none');
+  } else {
+    likeBackElements.forEach(element => element.style.display = '');
+    downButtonElements.forEach(element => element.style.display = '');
+  }
+}
+
+setInterval(checkPlayerBar, 300);
+
+setInterval(updateLikeButtonBackground, 300);
+
+// Первоначальная проверка для установки правильного фона при загрузке страницы
+updateLikeButtonBackground();
+
+// dynamicLight
 function addDynamicLightElement() {
     const dynamicLight = document.createElement('div');
 
@@ -155,8 +216,6 @@ function searchBlock() {
     document.body.appendChild(searchBlock);
 }
 
-searchBlock();
-
 // Субтитры
 const floatingDiv = document.createElement('div');
 floatingDiv.id = 'floatingDiv';
@@ -186,11 +245,9 @@ setInterval(updateFloatingText, 100);
 
 updateFloatingText();
 
-// Получаем элементы
 const playerBar = document.querySelector('.PlayerBar_root__cXUnU');
 const logo = document.querySelector('.NavbarDesktop_logo__Z4jGx');
 
-// Добавляем обработчики событий
 playerBar.addEventListener('mouseenter', () => {
     logo.style.opacity = 1;
 });
