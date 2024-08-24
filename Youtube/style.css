@@ -158,7 +158,8 @@ section.PlayerBar_root__cXUnU {
 	right: 0;
 	bottom: 0;
 	top: 155px;
-	left: 1090px;
+	left: calc(50% - 700px);
+	margin-left: 985px;
 	z-index: 100;
 }
 
@@ -433,4 +434,18 @@ section.PlayerBar_root__cXUnU {
 	width: 32px;
 	height: 32px;
 	opacity: 0.095;
+}
+
+.PlayerBarDesktop_settingsButton__jLkVn {
+	position: fixed;
+	top: 671px;
+	left: calc(50% - 700px);
+	margin-left: 877px;
+}
+
+[data-test-id="PLAYERBAR_DESKTOP_PLAY_QUEUE_BUTTON"] {
+	position: fixed;
+	top: 671px;
+	left: calc(50% - 700px);
+	margin-left: 830px;
 }
