@@ -12,6 +12,7 @@ section.PlayerBar_root__cXUnU {
 	left: calc(50% - 700px);
 	top: 160px;
 	z-index: 20;
+	border-radius: 15px;
 }
 
 .dynamicLight {
@@ -30,23 +31,73 @@ section.PlayerBar_root__cXUnU {
 	opacity: 0.4;
 }
 
-.SonataControlsDesktop_sonataButtons__ux0qT {
+[data-test-id="PLAY_BUTTON_NOT_PLAYING"],
+[data-test-id="PLAY_BUTTON_PLAYING"] {
 	position: fixed;
 	left: calc(50% - 700px);
-	margin-left: 20px;
-	top: 664px;
+	margin-left: 12px;
+	top: 671px;
+	opacity: 0;
+	scale: 0.9;
+	z-index: 22;
+}
+
+.PlayPauseContent {
+	position: fixed;
+	top: 685px;
+	left: calc(50% - 700px);
+	margin-left: 25px;
+	width: 23px;
+	height: 23px;
+	z-index: 21;
+	pointer-events: none;
+}
+
+/*NEXT_TRACK_BUTTON*/
+[data-test-id="NEXT_TRACK_BUTTON"] {
+	position: fixed;
+	left: calc(50% - 700px);
+	margin-left: 65px;
+	top: 685px;
+	opacity: 1;
+	background-image: url("http://127.0.0.1:2007/assets/next-track.png");
+	width: 10px;
+	height: 10px;
+	scale: 0.85;
+	color: #0000;
+	border-radius: 0;
+	opacity: 1;
+	background-size: cover;
+}
+
+[data-test-id="NEXT_TRACK_BUTTON"]:hover {
+	opacity: 1;
+	background-image: url("http://127.0.0.1:2007/assets/next-track.png");
+	width: 10px;
+	height: 10px;
+	scale: 0.8;
+	color: #0000;
+	border-radius: 0;
+	opacity: 1;
+	background-size: cover;
 }
 
 .ChangeTimecode_slider__P4qmT {
 	position: fixed;
 	left: calc(50% - 700px);
 	margin-left: 10px;
-	top: 645px;
+	top: 666px;
 	width: 961px;
+	height: 3px;
+	border-radius: 0px;
+	border-width: 0;
 }
 
 .JkKcxRVvjK7lcakkEliC:before {
 	background-color: #f00;
+	height: 3px;
+	border-radius: 0px;
+	border-width: 0;
 }
 
 .ChangeTimecode_slider__P4qmT {
@@ -56,11 +107,11 @@ section.PlayerBar_root__cXUnU {
 .SonataControlsDesktop_root__oluUH {
 	position: fixed;
 	left: calc(50% - 700px);
-	margin-left: 1px;
-	width: 978px;
+	margin-left: 0.49px;
+	width: 979.02px;
 	height: 90px;
 	top: 633px;
-	border-radius: 8.8px;
+	border-radius: 13.5px;
 	background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.7) 100%);
 }
 
@@ -68,10 +119,10 @@ section.PlayerBar_root__cXUnU {
 	position: fixed;
 	left: calc(50% - 700px);
 	margin-left: 150px;
-	top: 680px;
+	top: 688px;
 	opacity: 1;
 	color: #fff;
-	font-weight: 250;
+	font-weight: 290;
 }
 
 .Timecode_root_start__pHG5N:after {
@@ -83,19 +134,41 @@ section.PlayerBar_root__cXUnU {
 	position: fixed;
 	left: calc(50% - 700px);
 	margin-left: 198px;
-	top: 680px;
+	top: 688px;
 	opacity: 1;
 	color: #fff;
-	font-weight: 250;
+	font-weight: 290;
 }
 
+/*Volume*/
 .ChangeVolume_icon__5Zv2a {
+	color: #0000;
+	visibility: hidden;
+}
+
+[aria-label="Выключить звук"] {
 	position: fixed;
 	left: calc(50% - 700px);
-	margin-left: 112px;
-	top: 676px;
+	margin-left: 110px;
+	top: 685px;
+	width: 23px;
+	height: 23px;
+	background-size: cover;
+	background-image: url("http://127.0.0.1:2007/assets/sound1.png");
 }
 
+[aria-label="Включить звук"] {
+	position: fixed;
+	left: calc(50% - 700px);
+	margin-left: 110px;
+	top: 685px;
+	width: 23px;
+	height: 23px;
+	background-size: cover;
+	background-image: url("http://127.0.0.1:2007/assets/sound0.png");
+}
+
+/*Fullscreen Button*/
 .FullscreenPlayerDesktopButton_root__qGgoC {
 	opacity: 1;
 	background: 0;
@@ -105,9 +178,29 @@ section.PlayerBar_root__cXUnU {
 .FullscreenPlayerDesktopButton_button__7NEl6 {
 	position: fixed;
 	left: calc(50% - 700px);
-	margin-left: 918px;
-	top: 665px;
+	margin-left: 930px;
+	top: 688px;
 	background: 0;
+	width: 20px;
+	height: 20px;
+	background-size: cover;
+	border-radius: 0;
+	pointer-events: none;
+	background-image: url("http://127.0.0.1:2007/assets/fullscreen-button.png");
+}
+
+.FullscreenPlayerDesktopButton_button__7NEl6:hover {
+	position: fixed;
+	left: calc(50% - 700px);
+	margin-left: 930px;
+	top: 688px;
+	background: 0;
+	width: 20px;
+	height: 20px;
+	background-size: cover;
+	border-radius: 0;
+	pointer-events: none;
+	background-image: url("http://127.0.0.1:2007/assets/fullscreen-button.png");
 }
 
 .PlayerBarDesktop_meta__6sm58 {
@@ -438,9 +531,13 @@ section.PlayerBar_root__cXUnU {
 
 .PlayerBarDesktop_settingsButton__jLkVn {
 	position: fixed;
-	top: 671px;
+	top: 687px;
 	left: calc(50% - 700px);
 	margin-left: 877px;
+	width: 20px;
+	height: 20px;
+	background-size: cover;
+	background-image: url("http://127.0.0.1:2007/assets/settings-button.png");
 }
 
 [data-test-id="PLAYERBAR_DESKTOP_PLAY_QUEUE_BUTTON"] {
@@ -448,4 +545,19 @@ section.PlayerBar_root__cXUnU {
 	top: 671px;
 	left: calc(50% - 700px);
 	margin-left: 830px;
+}
+
+[aria-label="Включить текстомузыку Может нарушить доступность"] {
+	position: fixed;
+	left: calc(50% - 700px);
+	margin-left: 780px;
+	top: 687px;
+	width: 25px;
+	height: 20px;
+	color: #0000;
+	background-position: center;
+	border-radius: 0;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-image: url("http://127.0.0.1:2007/assets/subtitles-button.png");
 }

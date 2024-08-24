@@ -34,6 +34,37 @@ setInterval(() => {
     }
 }, 500);
 
+// Создаем новый div элемент с классом PlayPauseContent
+const playPauseContent = document.createElement('div');
+playPauseContent.classList.add('PlayPauseContent');
+playPauseContent.style.backgroundImage = 'url("http://127.0.0.1:2007/assets/pause.png")';
+playPauseContent.style.backgroundSize = 'cover'; // Адаптируем изображение под размеры
+
+// Добавляем div элемент в документ (например, в body)
+document.body.appendChild(playPauseContent);
+
+// Функция для проверки состояния и изменения backgroundImage
+function checkAndUpdateContent() {
+  const sonataButton = document.querySelector('body > div > section > div > div > div > button.WsKeF73pWotx9W1tWdYY');
+
+  if (sonataButton) {
+    const dataTestId = sonataButton.getAttribute('data-test-id');
+    console.log('Current data-test-id:', dataTestId); // Выводим текущий атрибут для отладки
+
+    if (dataTestId === 'PLAY_BUTTON_NOT_PLAYING') {
+      console.log('Switching to arch.png');
+      playPauseContent.style.backgroundImage = 'url("http://127.0.0.1:2007/assets/pause.png")';
+    } else if (dataTestId === 'PLAY_BUTTON_PLAYING') {
+      console.log('Switching to down-buttons.png');
+      playPauseContent.style.backgroundImage = 'url("http://127.0.0.1:2007/assets/play.png")';
+    }
+  } else {
+    console.log('Element with class SonataControlsDesktop_sonataButton__FTykq not found');
+  }
+}
+
+// Запускаем проверку каждую секунду
+setInterval(checkAndUpdateContent, 50);
 
 // downButtons
 function downButtons() {
