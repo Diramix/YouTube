@@ -113,6 +113,7 @@ section.PlayerBar_root__cXUnU {
 	top: 633px;
 	border-radius: 13.5px;
 	background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.7) 100%);
+	z-index: -1;
 }
 
 .Timecode_root_start__pHG5N {
@@ -233,10 +234,6 @@ section.PlayerBar_root__cXUnU {
 	backdrop-filter: none;
 }
 
-.FullscreenPlayerDesktop_closeButton__MQ64s {
-	visibility: visible;
-}
-
 .DefaultLayout_content__md70Z {
 	position: fixed;
 	width: 0;
@@ -322,6 +319,7 @@ section.PlayerBar_root__cXUnU {
 	left: calc(50% - 700px);
 	margin-left: 53px;
 	color: #fff;
+	z-index: 99999;
 }
 
 .Meta_artistCaption__JESZi {
@@ -531,9 +529,9 @@ section.PlayerBar_root__cXUnU {
 
 .PlayerBarDesktop_settingsButton__jLkVn {
 	position: fixed;
-	top: 687px;
+	top: 688px;
 	left: calc(50% - 700px);
-	margin-left: 877px;
+	margin-left: 885px;
 	width: 20px;
 	height: 20px;
 	background-size: cover;
@@ -542,22 +540,102 @@ section.PlayerBar_root__cXUnU {
 
 [data-test-id="PLAYERBAR_DESKTOP_PLAY_QUEUE_BUTTON"] {
 	position: fixed;
-	top: 671px;
+	top: 682px;
 	left: calc(50% - 700px);
-	margin-left: 830px;
+	margin-left: 834px;
 }
 
 [aria-label="Включить текстомузыку Может нарушить доступность"] {
 	position: fixed;
 	left: calc(50% - 700px);
-	margin-left: 780px;
-	top: 687px;
-	width: 25px;
-	height: 20px;
+	margin-left: 790px;
+	top: 688px;
+	width: 23px;
+	height: 18px;
 	color: #0000;
 	background-position: center;
 	border-radius: 0;
 	background-size: contain;
 	background-repeat: no-repeat;
-	background-image: url("http://127.0.0.1:2007/assets/subtitles-button.png");
+}
+
+.UwnL5AJBMMAp6NwMDdZk {
+	visibility: hidden;
+}
+
+/* Если aria-hidden="true", убираем background-image */
+[aria-label="Включить текстомузыку Может нарушить доступность"][aria-hidden="true"] {
+    background-image: url("http://127.0.0.1:2007/assets/subtitles-button.png");
+    color: #0000;
+    opacity: 0.1;
+}
+
+/* Если aria-hidden="false", устанавливаем background-image */
+[aria-label="Включить текстомузыку Может нарушить доступность"][aria-hidden="false"] {
+    background-image: url("http://127.0.0.1:2007/assets/subtitles-button.png");
+}
+
+.FullscreenPlayerDesktop_closeButton__MQ64s {
+	visibility: visible;
+	position: fixed;
+	left: calc(50% - 700px);
+	margin-left: 788px;
+	top: 686px;
+	background: 0;
+	color: #0000;
+	border-radius: 0;
+	border-style: solid;
+	border-color: #f00;
+	border-width: 0px 0px 3px 0px;
+	width: 29px;
+	height: 25px;
+}
+
+.NotificationUpdate_important___0WHj {
+	top: 80px;
+	height: 150px;
+	width: 505px;
+	background: #fff;
+	border-color: #bebebe;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 5px;
+	box-shadow: 0px 0px 15px -10px #000;
+}
+
+.NotificationUpdate_text__YylYD {
+	position: relative;
+	color: #000;
+	margin-bottom: 80px;
+}
+
+.NotificationUpdate_text__YylYD::before {
+	content: '';
+	display: inline-block;
+	width: 45px;
+	height: 45px;
+	background-image: url("http://127.0.0.1:2007/assets/ym-logo.png");
+	background-size: cover;
+	background-position: center;
+	vertical-align: middle;
+	margin-right: 10px;
+	margin-left: -3px;
+	border-radius: 5px;
+}
+
+.NotificationUpdate_button__F3O16 {
+	background: #669df6;
+	margin-right: 12px;
+	margin-bottom: -80px;
+	border-radius: 5px;
+	color: #fff;
+}
+
+.NotificationUpdate_button__F3O16:hover {
+	background: #669df6;
+	margin-right: 12px;
+	margin-bottom: -80px;
+	border-radius: 5px;
+	color: #fff;
+	filter: brightness(1.1);
 }

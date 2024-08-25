@@ -34,6 +34,79 @@ setInterval(() => {
     }
 }, 500);
 
+// Добавление CSS стилей для анимации
+const style = document.createElement('style');
+style.textContent = `
+    /* CSS-класс для начального состояния элементов (скрыто) */
+    .hidden {
+        opacity: 0;
+        transition: opacity 0.5s ease; /* Плавное изменение прозрачности за 0.5 секунды */
+        display: block; /* Убедитесь, что элемент занимает место в документе */
+    }
+
+    /* CSS-класс для отображения элементов */
+    .visible {
+        opacity: 1;
+        transition: opacity 0.5s ease; /* Плавное изменение прозрачности за 0.5 секунды */
+    }
+`;
+document.head.appendChild(style);
+
+// Функция для скрытия элементов, добавляя CSS-класс .hidden
+function hideElementsByClasses(classes) {
+    classes.forEach(className => {
+        const elements = document.querySelectorAll(`.${className}`);
+        elements.forEach(element => {
+            element.classList.add('hidden');
+            element.classList.remove('visible');
+        });
+    });
+}
+
+// Функция для отображения элементов, добавляя CSS-класс .visible
+function showElementsByClasses(classes) {
+    classes.forEach(className => {
+        const elements = document.querySelectorAll(`.${className}`);
+        elements.forEach(element => {
+            element.classList.add('visible');
+            element.classList.remove('hidden');
+        });
+    });
+}
+
+// Классы элементов, которые нужно скрыть
+const classesToHide = [
+    'SonataControlsDesktop_root__oluUH',
+    'ChangeTimecode_timecode__UScFt',
+    'ChangeVolume_button__4HLEr',
+    'PlayerBarDesktop_meta__6sm58',
+    'FullscreenPlayerDesktopButton_button__7NEl6',
+    'NavbarDesktop_logo__Z4jGx'
+];
+
+// Класс элемента, на который нужно навести курсор
+const hoverClass = 'PlayerBar_root__cXUnU';
+
+// Инициализация скрытия элементов
+document.addEventListener('DOMContentLoaded', () => {
+    // Скрыть элементы при загрузке страницы
+    hideElementsByClasses(classesToHide);
+
+    // Найти элемент, на который нужно навести курсор
+    const hoverElement = document.querySelector(`.${hoverClass}`);
+
+    if (hoverElement) {
+        hoverElement.addEventListener('mouseenter', () => {
+            showElementsByClasses(classesToHide);
+        });
+
+        hoverElement.addEventListener('mouseleave', () => {
+            hideElementsByClasses(classesToHide);
+        });
+    }
+});
+
+
 // Создаем новый div элемент с классом PlayPauseContent
 const playPauseContent = document.createElement('div');
 playPauseContent.classList.add('PlayPauseContent');
@@ -305,14 +378,3 @@ function updateFloatingText() {
 setInterval(updateFloatingText, 100);
 
 updateFloatingText();
-
-const playerBar = document.querySelector('.PlayerBar_root__cXUnU');
-const logo = document.querySelector('.NavbarDesktop_logo__Z4jGx');
-
-playerBar.addEventListener('mouseenter', () => {
-    logo.style.opacity = 1;
-});
-
-playerBar.addEventListener('mouseleave', () => {
-    logo.style.opacity = 0;
-});
