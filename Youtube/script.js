@@ -74,38 +74,24 @@ function showElementsByClasses(classes) {
     });
 }
 
-// Классы элементов, которые нужно скрыть
-const classesToHide = [
-    'SonataControlsDesktop_root__oluUH',
-    'ChangeTimecode_timecode__UScFt',
-    'ChangeVolume_button__4HLEr',
-    'PlayerBarDesktop_meta__6sm58',
-    'FullscreenPlayerDesktopButton_button__7NEl6',
-    'NavbarDesktop_logo__Z4jGx'
-];
+// Лютый скрипт который убирает полоску йоу
+function toggleCloseButton() {
+    const ariaLabelElement = document.querySelector('[aria-label="Включить текстомузыку Может нарушить доступность"]');
 
-// Класс элемента, на который нужно навести курсор
-const hoverClass = 'PlayerBar_root__cXUnU';
+    const closeButton = document.querySelector('.FullscreenPlayerDesktop_closeButton__MQ64s');
 
-// Инициализация скрытия элементов
-document.addEventListener('DOMContentLoaded', () => {
-    // Скрыть элементы при загрузке страницы
-    hideElementsByClasses(classesToHide);
+    if (ariaLabelElement && closeButton) {
+        const isHidden = ariaLabelElement.getAttribute('aria-hidden') === 'true';
 
-    // Найти элемент, на который нужно навести курсор
-    const hoverElement = document.querySelector(`.${hoverClass}`);
-
-    if (hoverElement) {
-        hoverElement.addEventListener('mouseenter', () => {
-            showElementsByClasses(classesToHide);
-        });
-
-        hoverElement.addEventListener('mouseleave', () => {
-            hideElementsByClasses(classesToHide);
-        });
+        if (isHidden) {
+            closeButton.style.display = 'none';
+        } else {
+            closeButton.style.display = 'block';
+        }
     }
-});
+}
 
+setInterval(toggleCloseButton, 500);
 
 // Создаем новый div элемент с классом PlayPauseContent
 const playPauseContent = document.createElement('div');
@@ -177,19 +163,27 @@ function updateLikeButtonBackground() {
     }
 }
 
-// checkPlayerBar
 function checkPlayerBar() {
   const likeButton = document.querySelector('.PlayerBarDesktop_likeButton__LKH4K');
   
   const likeBackElements = document.querySelectorAll('.likeBack');
   const downButtonElements = document.querySelectorAll('.downButtons');
+  const navbarLogoElement = document.querySelector('.NavbarDesktop_logo__Z4jGx');
   
   if (!likeButton) {
     likeBackElements.forEach(element => element.style.display = 'none');
     downButtonElements.forEach(element => element.style.display = 'none');
+    
+    if (navbarLogoElement) {
+      navbarLogoElement.style.display = 'none';
+    }
   } else {
     likeBackElements.forEach(element => element.style.display = '');
     downButtonElements.forEach(element => element.style.display = '');
+    
+    if (navbarLogoElement) {
+      navbarLogoElement.style.display = '';
+    }
   }
 }
 
@@ -198,6 +192,7 @@ setInterval(checkPlayerBar, 300);
 setInterval(updateLikeButtonBackground, 300);
 
 updateLikeButtonBackground();
+
 
 // dynamicLight
 let currentBackground = "";

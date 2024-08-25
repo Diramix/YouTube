@@ -86,7 +86,7 @@ section.PlayerBar_root__cXUnU {
 	position: fixed;
 	left: calc(50% - 700px);
 	margin-left: 10px;
-	top: 666px;
+	top: 670px;
 	width: 961px;
 	height: 3px;
 	border-radius: 0px;
@@ -329,10 +329,11 @@ section.PlayerBar_root__cXUnU {
 .NavbarDesktop_logo__Z4jGx {
 	position: fixed;
 	top: 180px;
-	left: 100px;
+	left: calc(50% - 700px);
 	color: #fff;
 	z-index: 200;
 	opacity: 0.5;
+	pointer-events: none;
 }
 
 .AccK_iF55jra4_OlFloI,
@@ -540,16 +541,33 @@ section.PlayerBar_root__cXUnU {
 
 [data-test-id="PLAYERBAR_DESKTOP_PLAY_QUEUE_BUTTON"] {
 	position: fixed;
-	top: 682px;
+	top: 689px;
 	left: calc(50% - 700px);
 	margin-left: 834px;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 0;
+	width: 28px;
+	height: 18px;
 }
+
+[data-test-id="PLAYERBAR_DESKTOP_PLAY_QUEUE_BUTTON"][aria-hidden="true"] {
+	background-image: url(http://127.0.0.1:2007/assets/queue-button.png);
+	opacity: 0.1;
+}
+
+[data-test-id="PLAYERBAR_DESKTOP_PLAY_QUEUE_BUTTON"][aria-hidden="false"] {
+	background-image: url(http://127.0.0.1:2007/assets/queue-button.png);
+	opacity: 1;
+}
+
 
 [aria-label="Включить текстомузыку Может нарушить доступность"] {
 	position: fixed;
 	left: calc(50% - 700px);
 	margin-left: 790px;
-	top: 688px;
+	top: 689px;
 	width: 23px;
 	height: 18px;
 	color: #0000;
@@ -559,9 +577,6 @@ section.PlayerBar_root__cXUnU {
 	background-repeat: no-repeat;
 }
 
-.UwnL5AJBMMAp6NwMDdZk {
-	visibility: hidden;
-}
 
 /* Если aria-hidden="true", убираем background-image */
 [aria-label="Включить текстомузыку Может нарушить доступность"][aria-hidden="true"] {
@@ -580,7 +595,7 @@ section.PlayerBar_root__cXUnU {
 	position: fixed;
 	left: calc(50% - 700px);
 	margin-left: 788px;
-	top: 686px;
+	top: 687px;
 	background: 0;
 	color: #0000;
 	border-radius: 0;
@@ -591,6 +606,7 @@ section.PlayerBar_root__cXUnU {
 	height: 25px;
 }
 
+/*Update Notification*/
 .NotificationUpdate_important___0WHj {
 	top: 80px;
 	height: 150px;
@@ -638,4 +654,9 @@ section.PlayerBar_root__cXUnU {
 	border-radius: 5px;
 	color: #fff;
 	filter: brightness(1.1);
+}
+
+/*Исправление всех проблем*/
+.UwnL5AJBMMAp6NwMDdZk {
+	visibility: hidden;
 }
