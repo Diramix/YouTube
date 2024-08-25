@@ -236,7 +236,10 @@ section.PlayerBar_root__cXUnU {
 
 .DefaultLayout_content__md70Z {
 	position: fixed;
-	width: 0;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
 	background: 0;
 	border-width: 0;
 	border-radius: 0;
@@ -426,7 +429,7 @@ section.PlayerBar_root__cXUnU {
 /* Стили для floatingDiv */
 #floatingDiv {
     position: fixed;
-    top: 600px;
+    top: 625px;
     left: calc(50% - 700px);
     margin-left: 490px;
     transform: translateX(-50%); /* Центрируем элемент по горизонтали */
