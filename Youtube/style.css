@@ -611,17 +611,17 @@ section.PlayerBar_root__cXUnU {
 	top: 80px;
 	height: 150px;
 	width: 505px;
-	background: #fff;
-	border-color: #bebebe;
+	background: #1F1F1F;
+	border-color: #444746;
 	border-style: solid;
 	border-width: 1px;
-	border-radius: 5px;
+	border-radius: 13px;
 	box-shadow: 0px 0px 15px -10px #000;
 }
 
 .NotificationUpdate_text__YylYD {
 	position: relative;
-	color: #000;
+	color: #fff;
 	margin-bottom: 80px;
 }
 
@@ -640,20 +640,22 @@ section.PlayerBar_root__cXUnU {
 }
 
 .NotificationUpdate_button__F3O16 {
-	background: #669df6;
-	margin-right: 12px;
+	background: #A7C6F9;
+	margin-right: 10px;
 	margin-bottom: -80px;
-	border-radius: 5px;
-	color: #fff;
+	border-radius: 150px;
+	color: #000;
+	font-weight: 100;
 }
 
 .NotificationUpdate_button__F3O16:hover {
-	background: #669df6;
-	margin-right: 12px;
+	background: #A7C6F9;
+	margin-right: 10px;
 	margin-bottom: -80px;
-	border-radius: 5px;
-	color: #fff;
-	filter: brightness(1.1);
+	border-radius: 150px;
+	color: #000;
+	font-weight: 100;
+	filter: brightness(0.95);
 }
 
 /*Исправление всех проблем*/
