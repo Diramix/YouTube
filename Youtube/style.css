@@ -218,15 +218,48 @@ section.PlayerBar_root__cXUnU {
 .NavbarDesktop_pinsList___jXIM:before,
 .ZrkG6gNYcr4h3hfkhyT1,
 .xfFtKQpgAYvC2jI1tBtS,
-.UserProfile_root__vFuOj,
 .l66GiFKS1Ux_BNd603Cu,
 .ZSjQrniulol6xKOq2Bou,
 [data-test-id="SHUFFLE_BUTTON"],
 [data-test-id="REPEAT_BUTTON_NO_REPEAT"],
 .NavbarDesktop_collapseButton__XQh9d,
 .Meta_explicitMark__ocnCV,
-.Meta_version__c2sHU {
+.Meta_version__c2sHU,
+.UserProfile_meta___okny {
 	display: none;
+}
+
+/*UserProfile*/
+.UserProfile_root__vFuOj {
+	position: fixed;
+	top: 96px;
+	right: 28px;
+	z-index: 999;
+}
+
+.UserID-Avatar {
+	width: 33px;
+	height: 33px;
+}
+
+.UserID-Avatar:after {
+	display: none;
+}
+
+.UserProfile_dialog_desktop__0p006 {
+	position: fixed;
+	top: 150px;
+	right: 20px;
+	left: calc(100% - 342px);
+	margin-bottom: 62px;
+}
+
+.AvatarImage {
+	position: fixed;
+	top: 300px;
+	width: 300px;
+	height: 300px;
+	z-index: 9999999;
 }
 
 .FullscreenPlayerDesktop_important__dGfiL {
