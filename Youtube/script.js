@@ -345,6 +345,8 @@ function searchBlock() {
     document.body.appendChild(searchBlock);
 }
 
+searchBlock();
+
 // Субтитры
 const floatingDiv = document.createElement('div');
 floatingDiv.id = 'floatingDiv';
