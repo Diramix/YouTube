@@ -436,7 +436,6 @@ button.Tab_title__hAYZk[aria-selected="true"] {
 	left: calc(50% - 700px);
 	font-size: 23px;
 	font-weight: 500;
-	pointer-events: none;
 }
 
 .PlayerBarDesktop_coverContainer__2Z5nQ {
@@ -495,7 +494,15 @@ button.Tab_title__hAYZk[aria-selected="true"] {
 .browserScreen {
 	position: fixed;
 	content: url("http://127.0.0.1:2007/assets/browser.png");
-	z-index: 14;
+	z-index: 21;
+	left: 0;
+	top: 0;
+}
+
+.LeftBScreen {
+	position: fixed;
+	content: url("http://127.0.0.1:2007/assets/left-b-screen.png");
+	z-index: 18;
 	left: 0;
 	top: 0;
 }
@@ -508,6 +515,17 @@ button.Tab_title__hAYZk[aria-selected="true"] {
 	color: #8A82AD;
 	font-weight: 360;
 	font-size: 13.5px;
+	filter: brightness(1.1);
+}
+
+.PageTitle {
+	position: fixed;
+	top: 12px;
+	left: 31px;
+	z-index: 19;
+	color: #E8E0FF;
+	font-weight: 300;
+	font-size: 14px;
 }
 
 .browserButtons {
@@ -549,10 +567,13 @@ button.Tab_title__hAYZk[aria-selected="true"] {
 
 /*Цвета*/
 .firstColorBlock {
+	position: relative;
+	top: 0;
+	margin-left: 220px;
 	background-color: #22153F;
 	width: 100%;
 	height: 44px;
-	z-index: 90;
+	z-index: 20;
 }
 
 .secondColorBlock {

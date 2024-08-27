@@ -418,3 +418,62 @@ function updateElement() {
 updateElement();
 
 setInterval(updateElement, 2000);
+
+// Функция для создания нового элемента и вставки его в DOM
+function createPageTitleElement(text) {
+    // Создание нового элемента
+    const newElement = document.createElement('div');
+    newElement.className = 'PageTitle'; // Установка класса
+    newElement.textContent = text; // Установка текста
+
+    // Добавление элемента в DOM
+    document.body.appendChild(newElement); // Вставка в конец <body> (можно изменить на другой контейнер)
+
+    return newElement; // Возвращаем ссылку на созданный элемент
+}
+
+// Функция для проверки наличия элемента и его обработки
+function checkMetaTitle() {
+    // Поиск элемента с классом Meta_title__GGBnH
+    const metaTitleElement = document.querySelector('body > div > section > div > div > div > div > div > div > div > a > span.Meta_title__GGBnH');
+    
+    // Устанавливаем текст по умолчанию
+    const defaultText = "Rick Astley - Never Gonna Give You Up (Official Music Video)";
+    
+    let text = defaultText; // Изначально устанавливаем текст по умолчанию
+    
+    if (metaTitleElement) {
+        // Получаем текст из найденного элемента, если он существует
+        const metaText = metaTitleElement.textContent.trim();
+        if (metaText) {
+            text = metaText; // Используем текст из элемента, если он не пустой
+        }
+    }
+    
+    // Ищем элемент PageTitle, если он уже существует
+    let pageTitleElement = document.querySelector('.PageTitle');
+    
+    if (pageTitleElement) {
+        // Обновляем текст существующего элемента
+        if (pageTitleElement.textContent !== text) {
+            pageTitleElement.textContent = text;
+        }
+    } else {
+        // Создаем и добавляем новый элемент
+        createPageTitleElement(text);
+    }
+}
+
+// Запуск проверки каждые 2 секунды
+const checkInterval = setInterval(checkMetaTitle, 2000);
+
+// .LeftBScreen
+function LeftBScreen() {
+    const LeftBScreen = document.createElement('div');
+
+    LeftBScreen.classList.add('LeftBScreen');
+
+    document.body.appendChild(LeftBScreen);
+}
+
+LeftBScreen();
