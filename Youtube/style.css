@@ -510,22 +510,24 @@ button.Tab_title__hAYZk[aria-selected="true"] {
 .LinkTitle {
 	position: fixed;
 	top: 55px;
-	left: 543px;
+	left: 542px;
 	z-index: 15;
 	color: #8A82AD;
 	font-weight: 360;
-	font-size: 13.5px;
+	font-size: 13.2px;
 	filter: brightness(1.1);
+	font-family: Segoe UI;
 }
 
 .PageTitle {
 	position: fixed;
-	top: 12px;
+	top: 13px;
 	left: 31px;
 	z-index: 19;
 	color: #E8E0FF;
-	font-weight: 300;
-	font-size: 14px;
+	font-weight: 350;
+	font-size: 12.5px;
+	font-family: Segoe UI;
 }
 
 .browserButtons {
