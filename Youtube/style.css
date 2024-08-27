@@ -284,12 +284,13 @@ section.PlayerBar_root__cXUnU {
 .InStyle_tab__DeURY {
 	background: #fff;
 	border-radius: 5px;
+	filter: brightness(0.98);
 }
 
 .InStyle_tab__DeURY:hover {
 	background: #fff;
 	border-radius: 5px;
-	filter: brightness(1.1);
+	filter: brightness(1.0);
 }
 
 /*UserProfile*/
@@ -492,9 +493,11 @@ section.PlayerBar_root__cXUnU {
 .searchBlock {
 	position: fixed;
 	width: 30%;
+	max-width: 480px;
 	height: 40px;
 	top: 93px;
-	left: calc(50% - 15%);
+	left: 50%;
+	transform: translateX(-50%);
 	background: #121212;
 	border-color: #303030;
 	border-style: solid;
