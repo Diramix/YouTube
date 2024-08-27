@@ -31,8 +31,7 @@ section.PlayerBar_root__cXUnU {
 	opacity: 0.4;
 }
 
-[data-test-id="PLAY_BUTTON_NOT_PLAYING"],
-[data-test-id="PLAY_BUTTON_PLAYING"] {
+.SonataControlsDesktop_sonataButton__FTykq {
 	position: fixed;
 	left: calc(50% - 700px);
 	margin-left: 12px;
@@ -225,16 +224,80 @@ section.PlayerBar_root__cXUnU {
 .NavbarDesktop_collapseButton__XQh9d,
 .Meta_explicitMark__ocnCV,
 .Meta_version__c2sHU,
-.UserProfile_meta___okny {
+.UserProfile_meta___okny,
+.VibeBlock_root__z7LtR,
+.LikesAndHistory_carousel__579RD,
+.CarouselBlock_important__AARmP,
+.Vibes_important__Vew_4,
+.VibesCarousel_item__AupL0,
+.NewReleases_important__qkt9x,
+.Neuromusic_important__8Ib5E,
+[data-test-id="SMART_OPEN_PLAYLIST"],
+[data-test-id="RECOMMENDED_PLAYLISTS"],
+[data-test-id="NEUROMUSIC"],
+.BlockHeader_root__j3mb,
+.CompositeHeader_static__pZdrc,
+.CompositeHeader_stickyChild__nmQ60,
+.NewReleases_root__4ONiw,
+.Footer_empty__RR_zf,
+.BlockHeader_root__j3mbg,
+.MainPage_beta__y32vb,
+.AlbumCard_artistLink__uPR_2,
+.Rkdd2vKC_3xa1eUdRdHP,
+.Tab_covers__cvYeI,
+.bBh7lvgdfF7bqNqlK78Q,
+.AlbumCard_pinButton__Mdi_E {
 	display: none;
+}
+
+.RvWjZle1erRBXzJEF9Zj {
+	width: 200px;
+	height: 200px;
+	margin-left: -30px;
+	margin-top: -60px;
+}
+
+.Seq0GowcqQmiA9LdLP_g {
+	width: 200px;
+	height: 200px;
+	top: 0;
+	border-radius: 0;
+	opacity: 0;
+}
+
+.Skeleton_important___h_yG {
+	flex-direction: column;
+}
+
+.InStyle_tabCarousel__SXqBO {
+	flex-direction: unset;
+}
+
+.Tab_description__p1fTO {
+	margin-left: 8px;
+}
+
+.Tab_title__hAYZk {
+	color: #000;
+}
+
+.InStyle_tab__DeURY {
+	background: #fff;
+	border-radius: 5px;
+}
+
+.InStyle_tab__DeURY:hover {
+	background: #fff;
+	border-radius: 5px;
+	filter: brightness(1.1);
 }
 
 /*UserProfile*/
 .UserProfile_root__vFuOj {
 	position: fixed;
-	top: 96px;
+	top: 97px;
 	right: 28px;
-	z-index: 999;
+	z-index: 99999;
 }
 
 .UserID-Avatar {
@@ -269,14 +332,15 @@ section.PlayerBar_root__cXUnU {
 
 .DefaultLayout_content__md70Z {
 	position: fixed;
-	left: 0;
-	top: 0;
-	right: 0;
+	left: calc(50% + -700px);
+	margin-left: 978px;
+	top: 160px;
 	bottom: 0;
-	background: 0;
+	right: 0;
+	background: #0000;
 	border-width: 0;
 	border-radius: 0;
-	display: none;
+	z-index: 9999;
 }
 
 .NavbarDesktop_pinsList___jXIM {
@@ -287,6 +351,7 @@ section.PlayerBar_root__cXUnU {
 	left: calc(50% - 700px);
 	margin-left: 985px;
 	z-index: 100;
+	display: none;
 }
 
 .PinItem_cover__9TcjE {
@@ -294,6 +359,31 @@ section.PlayerBar_root__cXUnU {
 	height: 94px;
 	margin-top: 7px;
 	bottom: 35px;
+}
+
+.AlbumCard_coverBlock__94ZzY {
+	width: 168px;
+	height: 94px;
+}
+
+.AlbumCard_coverBlock__94ZzY {
+    display: flex;
+    justify-content: center;
+}
+
+.AlbumCard_root__vP6k4 {
+	flex-direction: unset;
+	width: 168px;
+	height: 90px;
+}
+
+.AlbumCard_titleLink__u_WLG {
+	pointer-events: none;
+}
+
+.PVBDIXF2RTUThmbNT9sV {
+	width: 200px;
+	margin-left: 10px;
 }
 
 .Pin_root__UyplT {
@@ -323,6 +413,7 @@ section.PlayerBar_root__cXUnU {
 	left: calc(50% - 700px);
 	font-size: 23px;
 	font-weight: 500;
+	pointer-events: none;
 }
 
 .PlayerBarDesktop_coverContainer__2Z5nQ {
@@ -360,6 +451,10 @@ section.PlayerBar_root__cXUnU {
 
 .Meta_artistCaption__JESZi {
 	color: #fff;
+}
+
+.Meta_text__Y5uYH {
+	pointer-events: none;
 }
 
 .NavbarDesktop_logo__Z4jGx {
