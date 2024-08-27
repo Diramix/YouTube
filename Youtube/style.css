@@ -13,11 +13,14 @@ section.PlayerBar_root__cXUnU {
 	top: 160px;
 	z-index: 20;
 	border-radius: 15px;
+	background-image: url("http://127.0.0.1:2007/assets/Rickroll.gif");
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .dynamicLight {
 	position: fixed;
-	background: #0000;
+	background: #C0C0F880;
 	border-width: 0;
 	border-radius: 30px;
 	width: 1060px;
@@ -509,12 +512,12 @@ button.Tab_title__hAYZk[aria-selected="true"] {
 
 .LinkTitle {
 	position: fixed;
-	top: 55px;
-	left: 542px;
+	top: 54px;
+	left: 542.5px;
 	z-index: 15;
 	color: #8A82AD;
 	font-weight: 360;
-	font-size: 13.2px;
+	font-size: 13.5px;
 	filter: brightness(1.1);
 	font-family: Segoe UI;
 }
