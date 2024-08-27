@@ -394,7 +394,7 @@ function updateElement() {
 
     const cleanedArtistText = artistText.replace(/\s+/g, '');
 
-    const randomString = generateRandomString(10);
+    const randomString = generateRandomString(11);
 
     let linkTitleElement = document.querySelector('.LinkTitle');
     
@@ -447,8 +447,8 @@ function checkMetaTitle() {
     let pageTitleElement = document.querySelector('.PageTitle');
     
     if (pageTitleElement) {
-        if (pageTitleElement.textContent !== text) {
-            pageTitleElement.textContent = text;
+        if (pageTitleElement.textContent !== text + " - YouTube") {
+            pageTitleElement.textContent = text + " - YouTube";
         }
     } else {
         createPageTitleElement(text);
@@ -467,3 +467,23 @@ function LeftBScreen() {
 }
 
 LeftBScreen();
+
+// ymLogoColor
+function applyBackgroundColor() {
+    const elementWithColor = document.querySelector("[style*='--player-average-color-background']");
+
+    if (elementWithColor) {
+        const backgroundColor = getComputedStyle(elementWithColor).getPropertyValue('--player-average-color-background');
+
+        const targetElements = document.querySelectorAll('.AccK_iF55jra4_OlFloI, .YjRa1ZjM_lXFlrfS7jcu, .qoEgTMlU0VM3i4p8LeMG');
+
+        targetElements.forEach(element => {
+            element.style.color = backgroundColor;
+            element.style.filter = `invert(100%)`;
+        });
+    }
+
+    setTimeout(applyBackgroundColor, 500);
+}
+
+applyBackgroundColor();

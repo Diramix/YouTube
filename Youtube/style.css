@@ -439,6 +439,7 @@ button.Tab_title__hAYZk[aria-selected="true"] {
 	left: calc(50% - 700px);
 	font-size: 23px;
 	font-weight: 500;
+	pointer-events: none;
 }
 
 .PlayerBarDesktop_coverContainer__2Z5nQ {
@@ -472,6 +473,7 @@ button.Tab_title__hAYZk[aria-selected="true"] {
 	margin-left: 53px;
 	color: #fff;
 	z-index: 99999;
+	pointer-events: none;
 }
 
 .Meta_artistCaption__JESZi {
@@ -484,14 +486,8 @@ button.Tab_title__hAYZk[aria-selected="true"] {
 	left: calc(50% - 700px);
 	color: #fff;
 	z-index: 200;
-	opacity: 0.5;
+	opacity: 1;
 	pointer-events: none;
-}
-
-.AccK_iF55jra4_OlFloI,
-.YjRa1ZjM_lXFlrfS7jcu,
-.qoEgTMlU0VM3i4p8LeMG {
-	color: #fff;
 }
 
 .browserScreen {

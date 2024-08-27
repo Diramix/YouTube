@@ -3,7 +3,7 @@
     "name": "YouTube",
     "author": "Diramix",
     "description": "The Big Black",
-    "version": "0.2.17",
+    "version": "0.2.18",
     "css": "style.css",
     "script": "script.js"
 }
