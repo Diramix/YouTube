@@ -374,3 +374,47 @@ function updateFloatingText() {
 setInterval(updateFloatingText, 100);
 
 updateFloatingText();
+
+// .LinkTitle
+function generateRandomString(length) {
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    let result = '';
+    for (let i = 0; i < length; i++) {
+        result += characters.charAt(Math.floor(Math.random() * characters.length));
+    }
+    return result;
+}
+
+let lastArtistText = '';
+
+function updateElement() {
+    const artistElement = document.querySelector('body > div > section > div > div > div > div > div > div > a > span.Meta_text__Y5uYH');
+
+    const artistText = artistElement ? (artistElement.textContent || artistElement.innerText) : '';
+
+    const cleanedArtistText = artistText.replace(/\s+/g, '');
+
+    const randomString = generateRandomString(10);
+
+    let linkTitleElement = document.querySelector('.LinkTitle');
+    
+    if (!linkTitleElement) {
+        linkTitleElement = document.createElement('div');
+        linkTitleElement.className = 'LinkTitle';
+        document.body.appendChild(linkTitleElement);
+    }
+
+    if (cleanedArtistText === '') {
+        linkTitleElement.textContent = 'dQw4w9WgXcQ';
+    } else {
+        if (cleanedArtistText !== lastArtistText) {
+            linkTitleElement.textContent = `${randomString}&ab_channel=${cleanedArtistText}`;
+
+            lastArtistText = cleanedArtistText;
+        }
+    }
+}
+
+updateElement();
+
+setInterval(updateElement, 2000);

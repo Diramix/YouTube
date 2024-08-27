@@ -476,10 +476,6 @@ button.Tab_title__hAYZk[aria-selected="true"] {
 	color: #fff;
 }
 
-.Meta_text__Y5uYH {
-	pointer-events: none;
-}
-
 .NavbarDesktop_logo__Z4jGx {
 	position: fixed;
 	top: 180px;
@@ -502,6 +498,16 @@ button.Tab_title__hAYZk[aria-selected="true"] {
 	z-index: 14;
 	left: 0;
 	top: 0;
+}
+
+.LinkTitle {
+	position: fixed;
+	top: 55px;
+	left: 543px;
+	z-index: 15;
+	color: #8A82AD;
+	font-weight: 360;
+	font-size: 13.5px;
 }
 
 .browserButtons {
