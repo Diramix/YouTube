@@ -193,7 +193,6 @@ setInterval(updateLikeButtonBackground, 300);
 
 updateLikeButtonBackground();
 
-
 // dynamicLight
 let currentBackground = "";
 let isAnimating = false;

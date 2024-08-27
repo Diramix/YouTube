@@ -274,29 +274,45 @@ section.PlayerBar_root__cXUnU {
 	flex-direction: unset;
 }
 
-.Tab_tab_size_s__zXitP {
-	min-height: 30px;
-	max-height: 30px;
-}
-
 .Tab_description__p1fTO {
 	margin-left: 8px;
 }
 
-.Tab_title__hAYZk {
+button.Tab_title__hAYZk[aria-selected="false"] {
+	color: #fff;
+}
+
+button.Tab_title__hAYZk[aria-selected="true"] {
 	color: #000;
 }
 
-.InStyle_tab__DeURY {
+.InStyle_tab__DeURY[aria-selected="true"],
+[data-test-id="TAB"][aria-selected="true"] {
 	background: #fff;
-	border-radius: 5px;
+	border-radius: 7px;
 	filter: brightness(0.98);
 }
 
-.InStyle_tab__DeURY:hover {
+.InStyle_tab__DeURY[aria-selected="true"]:hover,
+[data-test-id="TAB"][aria-selected="true"]:hover {
 	background: #fff;
-	border-radius: 5px;
+	border-radius: 7px;
 	filter: brightness(1.0);
+}
+
+.InStyle_tab__DeURY[aria-selected="false"] {
+	background: #282827;
+	border-radius: 7px;
+}
+
+.InStyle_tab__DeURY[aria-selected="false"]:hover {
+	background: #40403F;
+	border-radius: 7px;
+}
+
+.InStyle_tab__DeURY.InStyle_important__msPsl {
+	min-height: 0;
+	height: 32px;
 }
 
 /*UserProfile*/
@@ -343,7 +359,7 @@ section.PlayerBar_root__cXUnU {
 	margin-left: 978px;
 	top: 160px;
 	bottom: 0;
-	right: 0;
+	right: -24px;
 	background: #0000;
 	border-width: 0;
 	border-radius: 0;
