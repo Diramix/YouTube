@@ -173,6 +173,7 @@ section.PlayerBar_root__cXUnU {
 	opacity: 1;
 	background: 0;
 	z-index: 30;
+	pointer-events: none;
 }
 
 .FullscreenPlayerDesktopButton_button__7NEl6 {
@@ -271,6 +272,11 @@ section.PlayerBar_root__cXUnU {
 
 .InStyle_tabCarousel__SXqBO {
 	flex-direction: unset;
+}
+
+.Tab_tab_size_s__zXitP {
+	min-height: 30px;
+	max-height: 30px;
 }
 
 .Tab_description__p1fTO {
@@ -560,14 +566,14 @@ section.PlayerBar_root__cXUnU {
 /* Стили для floatingDiv */
 #floatingDiv {
     position: fixed;
-    top: 625px;
+    top: 635px;
     left: calc(50% - 700px);
     margin-left: 490px;
     transform: translateX(-50%); /* Центрируем элемент по горизонтали */
     z-index: 9999;
     background-color: rgba(0, 0, 0, 0.8);
     color: white;
-    padding: 5px;
+    padding: 0px 5px 0px 5px;
     border-radius: 0px;
     font-family: Arial, sans-serif;
     font-size: 18px;
