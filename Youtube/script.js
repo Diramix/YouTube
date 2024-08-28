@@ -169,6 +169,7 @@ function checkPlayerBar() {
   const likeBackElements = document.querySelectorAll('.likeBack');
   const downButtonElements = document.querySelectorAll('.downButtons');
   const navbarLogoElement = document.querySelector('.NavbarDesktop_logo__Z4jGx');
+  const separatedArtistsElement = document.querySelector('.SeparatedArtists_root_variant_breakAll__34YbW')
   
   if (!likeButton) {
     likeBackElements.forEach(element => element.style.display = 'none');
@@ -176,6 +177,7 @@ function checkPlayerBar() {
     
     if (navbarLogoElement) {
       navbarLogoElement.style.display = 'none';
+      separatedArtistsElement.style.display = 'none';
     }
   } else {
     likeBackElements.forEach(element => element.style.display = '');
@@ -183,6 +185,7 @@ function checkPlayerBar() {
     
     if (navbarLogoElement) {
       navbarLogoElement.style.display = '';
+      separatedArtistsElement.style.display = '';
     }
   }
 }
