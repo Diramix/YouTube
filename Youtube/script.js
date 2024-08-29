@@ -162,24 +162,24 @@ function updateLikeButtonBackground() {
 
 function checkPlayerBar() {
   const likeButton = document.querySelector('.PlayerBarDesktop_likeButton__LKH4K');
-  
-  const likeBackElements = document.querySelectorAll('.likeBack');
-  const downButtonElements = document.querySelectorAll('.downButtons');
   const navbarLogoElement = document.querySelector('.NavbarDesktop_logo__Z4jGx');
+  const rickrollDescriptionElement = document.querySelector('.rickrollDescription');
   
   if (!likeButton) {
-    likeBackElements.forEach(element => element.style.display = 'none');
-    downButtonElements.forEach(element => element.style.display = 'none');
-    
     if (navbarLogoElement) {
       navbarLogoElement.style.display = 'none';
     }
-  } else {
-    likeBackElements.forEach(element => element.style.display = '');
-    downButtonElements.forEach(element => element.style.display = '');
     
+    if (rickrollDescriptionElement) {
+      rickrollDescriptionElement.style.display = '';
+    }
+  } else {
     if (navbarLogoElement) {
       navbarLogoElement.style.display = '';
+    }
+    
+    if (rickrollDescriptionElement) {
+      rickrollDescriptionElement.style.display = 'none';
     }
   }
 }
@@ -280,68 +280,41 @@ setInterval(() => {
 }, 1000);
 
 // Бровсер скрин
-function addbrowserScreenElement() {
-    const browserScreen = document.createElement('div');
+const browserScreen = document.createElement('div');
 
-    browserScreen.classList.add('browserScreen');
+browserScreen.classList.add('browserScreen');
 
-    document.body.appendChild(browserScreen);
-}
-
-addbrowserScreenElement();
+document.body.appendChild(browserScreen);
 
 // Бровсер buttons
-function addbrowserButtonsElement() {
-    const browserButtons = document.createElement('div');
+const browserButtons = document.createElement('div');
 
-    browserButtons.classList.add('browserButtons');
+browserButtons.classList.add('browserButtons');
 
-    document.body.appendChild(browserButtons);
-}
-
-addbrowserButtonsElement();
+document.body.appendChild(browserButtons);
 
 // Цвета
-function firstColorBlock() {
-    const firstColorBlock = document.createElement('div');
+// firstColorBlock
+const firstColorBlock = document.createElement('div');
+firstColorBlock.classList.add('firstColorBlock');
+document.body.appendChild(firstColorBlock);
 
-    firstColorBlock.classList.add('firstColorBlock');
+//secondColorBlock
+const secondColorBlock = document.createElement('div');
+secondColorBlock.classList.add('secondColorBlock');
+document.body.appendChild(secondColorBlock);
 
-    document.body.appendChild(firstColorBlock);
-}
-
-firstColorBlock();
-
-function secondColorBlock() {
-    const secondColorBlock = document.createElement('div');
-
-    secondColorBlock.classList.add('secondColorBlock');
-
-    document.body.appendChild(secondColorBlock);
-}
-
-secondColorBlock();
-
-function thirdColorBlock() {
-    const thirdColorBlock = document.createElement('div');
-
-    thirdColorBlock.classList.add('thirdColorBlock');
-
-    document.body.appendChild(thirdColorBlock);
-}
-
-thirdColorBlock();
+//thirdColorBlock
+const thirdColorBlock = document.createElement('div');
+thirdColorBlock.classList.add('thirdColorBlock');
+document.body.appendChild(thirdColorBlock);
 
 // Поиск
-function searchBlock() {
-    const searchBlock = document.createElement('div');
+const searchBlock = document.createElement('div');
 
-    searchBlock.classList.add('searchBlock');
+searchBlock.classList.add('searchBlock');
 
-    document.body.appendChild(searchBlock);
-}
-
-searchBlock();
+document.body.appendChild(searchBlock);
 
 // Субтитры
 const floatingDiv = document.createElement('div');
@@ -389,7 +362,8 @@ function updateElement() {
 
     const artistText = artistElement ? (artistElement.textContent || artistElement.innerText) : '';
 
-    const cleanedArtistText = artistText.replace(/\s+/g, '');
+    // Удаляем пробелы и указанные символы
+    const cleanedArtistText = artistText.replace(/[\s.,![\](){}'"\\|/?*&%$#@]+/g, '');
 
     const randomString = generateRandomString(11);
 
@@ -455,15 +429,11 @@ function checkMetaTitle() {
 const checkInterval = setInterval(checkMetaTitle, 2000);
 
 // .LeftBScreen
-function LeftBScreen() {
-    const LeftBScreen = document.createElement('div');
+const LeftBScreen = document.createElement('div');
 
-    LeftBScreen.classList.add('LeftBScreen');
+LeftBScreen.classList.add('LeftBScreen');
 
-    document.body.appendChild(LeftBScreen);
-}
-
-LeftBScreen();
+document.body.appendChild(LeftBScreen);
 
 // ymLogoColor
 function applyBackgroundColor() {
@@ -484,3 +454,10 @@ function applyBackgroundColor() {
 }
 
 applyBackgroundColor();
+
+// .Rickroll Description
+const rickrollDescription = document.createElement('div');
+
+rickrollDescription.classList.add('rickrollDescription');
+
+document.body.appendChild(rickrollDescription);

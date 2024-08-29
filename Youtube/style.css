@@ -674,7 +674,7 @@ button.Tab_title__hAYZk[aria-selected="true"] {
 	top: 792px;
 	width: 20px;
 	height: 20px;
-	background: #00f;
+	background: #272727;
 	z-index: 5;
 }
 
@@ -841,4 +841,24 @@ button.Tab_title__hAYZk[aria-selected="true"] {
 	color: #000;
 	font-weight: 100;
 	filter: brightness(0.95);
+}
+
+.InStyle_important__msPsl[aria-selected="true"] > span > div {
+	color: #000;
+}
+
+.NfB1qSw6DnoSwTr9I5mE {
+	visibility: hidden;
+}
+
+/*rickrollDescription*/
+.rickrollDescription {
+	position: fixed;
+	content: "";
+	background-image: url("http://127.0.0.1:2007/assets/Rickroll-Description.png");
+	width: 1000px;
+	height: 300px;
+	top: 740px;
+	left: calc(50% - 700px);
+	z-index: 100;
 }
