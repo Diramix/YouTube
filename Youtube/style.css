@@ -37,8 +37,8 @@ section.PlayerBar_root__cXUnU {
 .SonataControlsDesktop_sonataButton__FTykq {
 	position: fixed;
 	left: calc(50% - 700px);
-	margin-left: 12px;
-	top: 671px;
+	margin-left: 15px;
+	top: 676px;
 	opacity: 0;
 	scale: 0.9;
 	z-index: 22;

@@ -107,14 +107,11 @@ function checkAndUpdateContent() {
   const sonataButton = document.querySelector('body > div > section > div > div > div > button.WsKeF73pWotx9W1tWdYY');
 
   if (sonataButton) {
-    const dataTestId = sonataButton.getAttribute('data-test-id');
-    console.log('Current data-test-id:', dataTestId); // Выводим текущий атрибут для отладки
+    const ariaLabel = sonataButton.getAttribute('aria-label');
 
-    if (dataTestId === 'PLAY_BUTTON_NOT_PLAYING') {
-      console.log('Switching to arch.png');
+    if (ariaLabel === 'Воспроизведение') {
       playPauseContent.style.backgroundImage = 'url("http://127.0.0.1:2007/assets/pause.png")';
-    } else if (dataTestId === 'PLAY_BUTTON_PLAYING') {
-      console.log('Switching to down-buttons.png');
+    } else if (ariaLabel === 'Пауза') {
       playPauseContent.style.backgroundImage = 'url("http://127.0.0.1:2007/assets/play.png")';
     }
   } else {
