@@ -477,5 +477,4 @@ function replaceText() {
     });
 }
 
-// Запускаем выполнение функции каждые 1 секунду (1000 мс)
 setInterval(replaceText, 100);

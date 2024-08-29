@@ -475,6 +475,7 @@ button.Tab_title__hAYZk[aria-selected="true"] {
 	margin-left: 53px;
 	color: #fff;
 	z-index: 99999;
+	max-width: 400px;
 	pointer-events: none;
 }
 
