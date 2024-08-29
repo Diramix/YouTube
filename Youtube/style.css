@@ -487,7 +487,7 @@ button.Tab_title__hAYZk[aria-selected="true"] {
 	position: fixed;
 	top: 180px;
 	left: calc(50% - 700px);
-	color: #fff;
+	color: #fff0;
 	z-index: 200;
 	opacity: 1;
 	pointer-events: none;
@@ -610,8 +610,8 @@ button.Tab_title__hAYZk[aria-selected="true"] {
 	opacity: 0;
 }
 
-/* Стили для floatingDiv */
-#floatingDiv {
+/* Стили для youTubeSubtitles */
+#youTubeSubtitles {
     position: fixed;
     top: 635px;
     left: calc(50% - 700px);
@@ -779,6 +779,7 @@ button.Tab_title__hAYZk[aria-selected="true"] {
 
 .FullscreenPlayerDesktop_closeButton__MQ64s {
 	visibility: visible;
+	opacity: 0;
 	position: fixed;
 	left: calc(50% - 700px);
 	margin-left: 788px;
@@ -887,4 +888,22 @@ button.Tab_title__hAYZk[aria-selected="true"] {
 .QualitySettingsContextMenu_itemWrapper__VOgWT {
 	color: #fff;
 	visibility: visible;
+}
+
+.subtitlesRedLine {
+	position: fixed;
+	content: "1";
+	left: calc(50% - 700px);
+	margin-left: 788px;
+	background: #f00;
+	width: 28px;
+	height: 3px;
+	top: 710px;
+	z-index: 99999;
+}
+
+.Toastify__toast-body {
+	position: fixed;
+	right: -240px;
+	bottom: 0px;
 }

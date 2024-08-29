@@ -123,15 +123,11 @@ function checkAndUpdateContent() {
 setInterval(checkAndUpdateContent, 50);
 
 // downButtons
-function downButtons() {
-    const downButtons = document.createElement('div');
+const downButtons = document.createElement('div');
 
-    downButtons.classList.add('downButtons');
+downButtons.classList.add('downButtons');
 
-    document.body.appendChild(downButtons);
-}
-
-downButtons();
+document.body.appendChild(downButtons);
 
 // .likeBack
 function likeBack() {
@@ -317,10 +313,10 @@ searchBlock.classList.add('searchBlock');
 document.body.appendChild(searchBlock);
 
 // Субтитры
-const floatingDiv = document.createElement('div');
-floatingDiv.id = 'floatingDiv';
+const youTubeSubtitles = document.createElement('div');
+youTubeSubtitles.id = 'youTubeSubtitles';
 
-document.body.appendChild(floatingDiv);
+document.body.appendChild(youTubeSubtitles);
 
 let previousText = '';
 
@@ -331,17 +327,17 @@ function updateFloatingText() {
         const currentText = lyricsElement.textContent.trim();
         
         if (currentText !== previousText) {
-            floatingDiv.textContent = currentText;
+            youTubeSubtitles.textContent = currentText;
             previousText = currentText;
         }
 
-        floatingDiv.style.display = 'block';
+        youTubeSubtitles.style.display = 'block';
     } else {
-        floatingDiv.style.display = 'none';
+        youTubeSubtitles.style.display = 'none';
         previousText = '';
     }
 }
-setInterval(updateFloatingText, 100);
+setInterval(updateFloatingText, 0);
 
 updateFloatingText();
 
@@ -362,8 +358,7 @@ function updateElement() {
 
     const artistText = artistElement ? (artistElement.textContent || artistElement.innerText) : '';
 
-    // Удаляем пробелы и указанные символы
-    const cleanedArtistText = artistText.replace(/[\s.,![\](){}'"\\|/?*&%$#@]+/g, '');
+    const cleanedArtistText = artistText.replace(/[\s.,![\](){}'"\\|/?*&%$#@★]+/g, '');
 
     const randomString = generateRandomString(11);
 
@@ -463,7 +458,7 @@ rickrollDescription.classList.add('rickrollDescription');
 document.body.appendChild(rickrollDescription);
 
 // Качество
-function replaceText() {
+function replaceQualityText() {
     const elements = document.querySelectorAll('.QualitySettingsContextMenu_item_option__SSxha');
 
     elements.forEach(element => {
@@ -477,4 +472,39 @@ function replaceText() {
     });
 }
 
-setInterval(replaceText, 100);
+setInterval(replaceQualityText, 100);
+
+// .subtitlesRedLine
+const subtitlesRedLine = document.createElement('div');
+
+subtitlesRedLine.classList.add('subtitlesRedLine');
+
+document.body.appendChild(subtitlesRedLine);
+
+// toggleSubtitlesRedLine
+function toggleSubtitlesRedLine() {
+    const closeButton = document.querySelector('.FullscreenPlayerDesktop_closeButton__MQ64s');
+    const subtitlesRedLine = document.querySelector('.subtitlesRedLine');
+
+    const shouldShowSubtitles = closeButton && getComputedStyle(closeButton).display !== 'none';
+
+    if (subtitlesRedLine) {
+        subtitlesRedLine.style.display = shouldShowSubtitles ? 'block' : 'none';
+    }
+}
+
+setInterval(toggleSubtitlesRedLine, 100);
+
+// Отключение тупого даблклика
+function disableDoubleClick() {
+    const elements = document.querySelectorAll('.PlayerBar_root__cXUnU');
+
+    elements.forEach(element => {
+        element.addEventListener('dblclick', function(event) {
+            event.preventDefault();
+            event.stopPropagation();
+        }, true);
+    });
+}
+
+setInterval(disableDoubleClick, 1000);
