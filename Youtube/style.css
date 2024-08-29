@@ -251,7 +251,8 @@ section.PlayerBar_root__cXUnU {
 .Tab_covers__cvYeI,
 .bBh7lvgdfF7bqNqlK78Q,
 .AlbumCard_pinButton__Mdi_E,
-.AlbumCard_artists__phKco {
+.AlbumCard_artists__phKco,
+.QualitySettingsContextMenu_itemSubTitle__YGtQk {
 	display: none;
 }
 
@@ -861,4 +862,28 @@ button.Tab_title__hAYZk[aria-selected="true"] {
 	top: 740px;
 	left: calc(50% - 700px);
 	z-index: 100;
+}
+
+.QualitySettingsContextMenu_root_withNewQuality__jPTb8 {
+	margin-left: -15px;
+	margin-top: 12px;
+	background: #151515;
+	opacity: 0.9;
+	border-radius: 15px;
+	width: 230px;
+	height: 270px;
+}
+
+.QualitySettingsContextMenu_headerWithCloseButton__vsXrW {
+	visibility: hidden;
+}
+
+.QualitySettingsContextMenu_headerWithCloseButton__vsXrW:before {
+	visibility: visible;
+	content: "Качество";
+}
+
+.QualitySettingsContextMenu_itemWrapper__VOgWT {
+	color: #fff;
+	visibility: visible;
 }

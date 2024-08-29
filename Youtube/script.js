@@ -461,3 +461,21 @@ const rickrollDescription = document.createElement('div');
 rickrollDescription.classList.add('rickrollDescription');
 
 document.body.appendChild(rickrollDescription);
+
+// Качество
+function replaceText() {
+    const elements = document.querySelectorAll('.QualitySettingsContextMenu_item_option__SSxha');
+
+    elements.forEach(element => {
+        if (element.textContent.trim() === 'Превосходное') {
+            element.textContent = '2160p';
+        } else if (element.textContent.trim() === 'Оптимальное') {
+            element.textContent = '720p';
+        } else if (element.textContent.trim() === 'Экономичное') {
+            element.textContent = '144p';
+        }
+    });
+}
+
+// Запускаем выполнение функции каждые 1 секунду (1000 мс)
+setInterval(replaceText, 100);
