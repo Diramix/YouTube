@@ -252,7 +252,10 @@ section.PlayerBar_root__cXUnU {
 .bBh7lvgdfF7bqNqlK78Q,
 .AlbumCard_pinButton__Mdi_E,
 .AlbumCard_artists__phKco,
-.QualitySettingsContextMenu_itemSubTitle__YGtQk {
+.QualitySettingsContextMenu_itemSubTitle__YGtQk,
+.FullscreenPlayerDesktopControls_menuButton__R4cXl,
+.SonataFullscreenControlsDesktop_playPauseButtonIcon__nD8zZ,
+.FullscreenPlayerDesktopControls_likeButton__vpJ7S {
 	display: none;
 }
 
@@ -850,8 +853,12 @@ button.Tab_title__hAYZk[aria-selected="true"] {
 	color: #000;
 }
 
-.NfB1qSw6DnoSwTr9I5mE {
+.UwnL5AJBMMAp6NwMDdZk {
 	visibility: hidden;
+}
+
+.NfB1qSw6DnoSwTr9I5mE {
+	visibility: visible;
 }
 
 /*rickrollDescription*/
@@ -906,4 +913,9 @@ button.Tab_title__hAYZk[aria-selected="true"] {
 	position: fixed;
 	right: -240px;
 	bottom: 0px;
+}
+
+[data-test-id="TRACK_CONTEXT_MENU"] {
+	position: fixed;
+	margin-left: -360px;
 }
