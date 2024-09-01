@@ -695,6 +695,7 @@ button.Tab_title__hAYZk[aria-selected="true"] {
 [data-test-id="PREVIOUS_TRACK_BUTTON"] {
 	position: fixed;
 	left: -4px;
+	margin-left: 12px;
 	top: 48.3px;
 	background: #fff;
 	z-index: 100;
