@@ -2,8 +2,8 @@
     "image": "image.png",
     "name": "YouTube",
     "author": "Diramix",
-    "description": "The Big Black",
-    "version": "1.0.0",
+    "description": "GoodbyeDPI",
+    "version": "1.0.1",
     "css": "style.css",
     "script": "script.js"
 }

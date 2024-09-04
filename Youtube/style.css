@@ -920,3 +920,13 @@ button.Tab_title__hAYZk[aria-selected="true"] {
 	position: fixed;
 	margin-left: -360px;
 }
+
+.PlayerBarDesktop_cover__IYLwR {
+	background-position: center;
+	background-size: cover;
+}
+
+.Content_main__8_wIa {
+	background: 0;
+	border-width: 0;
+}
