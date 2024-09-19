@@ -1,5 +1,6 @@
 /*ФОН*/
-.ym-dark-theme {
+.ym-dark-theme,
+.ym-light-theme {
     --ym-background-color-primary-enabled-basic: #0F0F0F;
 }
 
@@ -929,4 +930,16 @@ button.Tab_title__hAYZk[aria-selected="true"] {
 .Content_main__8_wIa {
 	background: 0;
 	border-width: 0;
+}
+
+.FullscreenPlayerDesktopContent_additionalContent__tuuy7 {
+	visibility: hidden;
+	max-width: 0;
+	max-height: 0;
+}
+
+[data-intersection-property-id="concerts_personal"],
+[data-intersection-property-id="ConcertsTop"],
+[id="concerts"] {
+	display: none;
 }
